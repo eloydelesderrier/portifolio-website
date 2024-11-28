@@ -17,10 +17,13 @@ export async function POST(request, res) {
       subject: subject,
       react: (
         <>
-          <h1>{subject}</h1>
+          <h1>Assunto:</h1>
+          <h2>{subject}</h2>
+          <h1>Menssagem:</h1>
+          <p>{message}</p>
           <p>Obrigado pelo contato, estarei em contato assim que possivel!</p>
           <p>Nova mensagem enviada: {email}</p>
-          <p>{message}</p>
+         
         </>
       ),
     });
