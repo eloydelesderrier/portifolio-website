@@ -18,8 +18,8 @@ export async function POST(request, res) {
       react: (
         <>
           <h1>{subject}</h1>
-          <p>Thank you for contacting us!</p>
-          <p>New message submitted:</p>
+          <p>Obrigado pelo contato, estarei em contato assim que possivel!</p>
+          <p>Nova mensagem enviada: {email}</p>
           <p>{message}</p>
         </>
       ),
