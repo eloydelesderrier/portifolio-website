@@ -8,7 +8,6 @@ import avatar from '../imagem/avatar.png';
 
 
 
-
 const HeroSection = () => {
     return (
       <section id="Home" className="lg:py-16">
@@ -19,7 +18,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5 }}
             className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
           >
-            <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+            <h1 className="text-white mb-4 text-4xl sm:text-6xl lg:text-6xl lg:leading-normal font-extrabold bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
                 Olá, Eu sou{" "}
               </span>
@@ -45,15 +44,15 @@ const HeroSection = () => {
               >
                 Contato
               </Link>
-              <a
-                href= '../curriculo/Eloy'
-                download = '../curriculo/Eloy'
+              <Link
+                href= '/Eloy.pdf'
+                download = {true}
                 className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
               >
                 <span className="transition ease-in delay-150 hover:-translate-y-1  duration-300 px-6 py-3 w-full sm:w-fit rounded-full block bg-gradient-to-br from-blue-500 via-purple-500">
                   Download CV
                 </span>
-              </a>
+              </Link>
             </div>
           </motion.div>
           <motion.div

@@ -5,6 +5,7 @@ import LinkedinIcon from "../../public/images/linkedinIcon.svg";
 import Link from "next/link";
 import Image from "next/image";
 
+
 const EmailSection = () =>{
     const [emailSubmitted, setEmailSubmitted] = useState(false);
     
@@ -15,8 +16,9 @@ const EmailSection = () =>{
             subject: e.target.subject.value,
             message: e.target.message.value,
         };
+        
         const JSONdata = JSON.stringify(data);
-        const endpoint = '/api/send';
+        const endpoint = 'api/send'
         
         const options = {
             method: "POST",
@@ -25,9 +27,11 @@ const EmailSection = () =>{
             },
             body: JSONdata,
         }
+        console.log(options);
 
         const response = await fetch(endpoint, options);
         const resData = await response.json();
+        
 
         if (response.status === 200){
             setEmailSubmitted(true);
