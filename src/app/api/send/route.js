@@ -12,8 +12,8 @@ export async function POST(request, res) {
   const { email, subject, message } = await request.json();
   
   try {
-     from: `${email} <${fromEmail}>`,
-      to: [emailFrom],
+     from: fromEmail,
+      to: [fromEmail],
       subject: subject,
       react: (
         <>
@@ -21,7 +21,7 @@ export async function POST(request, res) {
           
           <h2>mensagem:<p>{message}</p></h2>
 
-          
+          <p>{email}</p>
          
         </>
       ),
