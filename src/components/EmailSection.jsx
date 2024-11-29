@@ -27,7 +27,7 @@ const EmailSection = () =>{
             },
             body: JSONdata,
         }
-        console.log(options);
+       
 
         const response = await fetch(endpoint, options);
         const resData = await response.json();
