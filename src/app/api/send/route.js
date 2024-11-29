@@ -13,7 +13,7 @@ export async function POST(request, res) {
   
   try {
       from: `${email} <${fromEmail}>`,
-      to: emailFrom,
+      to: ['delesderrier22@gmail.com'],
       subject: subject,
       react: (
         <>
