@@ -7,28 +7,28 @@ const fromEmail = process.env.FROM_EMAIL;
 
 
 
-export async function POST(request, res) {
+xport async function POST(request, res) {
   const { email, subject, message } = await request.json();
   
   try {
-     from: fromEmail,
-      to: [fromEmail],
+    const data = await resend.emails.send({
+      from: `${email} <${fromEmail}>`,
+      to: [emailFrom],
       subject: subject,
       react: (
         <>
-          <h1>Assunto:<p>{subject}</p></h1>
+          <h1>Assunto:</h1>
+          <p>{subject}</p>
           
-          <h2>mensagem:<p>{message}</p></h2>
-
-          <p>{email}</p>
-         
+          <h2>mensagem:</h2>
+          <p>{message}</p>
+                  
+          
         </>
-      ),
-    });
+      )
+    })
     return NextResponse.json(data);
   } catch (error) {
     return NextResponse.json({ error });
   }
 }
-
-
