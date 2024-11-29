@@ -12,7 +12,7 @@ export async function POST(request, res) {
   const { email, subject, message } = await request.json();
   
   try {
-      from: `${email} <${fromEmail}>`,
+      from: fromEmail,
       to: [emailFrom],
       subject: subject,
       react: (
