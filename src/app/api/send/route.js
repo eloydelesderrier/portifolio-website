@@ -13,7 +13,7 @@ export async function POST(request, res) {
   
   try {
     const data = await resend.emails.send({
-      from: `${email} <${fromEmail}>`,
+      from: fromEmail,
       to: [emailFrom],
       subject: subject,
       react: (
@@ -23,6 +23,7 @@ export async function POST(request, res) {
           
           <h2>mensagem:</h2>
           <p>{message}</p><br/>
+          <p>{email}</p>
           
                   
           
