@@ -7,7 +7,7 @@ const fromEmail = process.env.FROM_EMAIL;
 
 
 
-xport async function POST(request, res) {
+export async function POST(request, res) {
   const { email, subject, message } = await request.json();
   
   try {
