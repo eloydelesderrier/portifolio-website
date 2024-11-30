@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Skill = ({name, x, y}) =>{
   return (
-    <motion.div className="felx items-center justify-center rounded-full font-semibold bg-black text-light
+    <motion.div className="felx items-center justify-center rounded-full font-semibold bg-black text-white
             py-3 px-6 shadow-orange-200 cursor-pointer absolute
             lg:py-6 lg:px- md:text-sm md:py-1.5 md:px-6 xs:bg:transparent xs:dark:bg-transparent
             
