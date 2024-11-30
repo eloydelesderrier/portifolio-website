@@ -28,7 +28,7 @@ const Skills =()=> {
     <>
       <section id="skills">
         
-        <h2 className="flex container lg:py-4 items-center justify-around mx-auto text-6xl font-bold  md:text-6xl " >Habilidades</h2>
+        <h2 className="flex container lg:py-4 items-center justify-around mx-auto text-6xl font-bold  md:text-6xl text-white " >Habilidades</h2>
           <div className="w-full h-screen relative flex items-center rounded-full justify-center bg-circularLight 
       
 
