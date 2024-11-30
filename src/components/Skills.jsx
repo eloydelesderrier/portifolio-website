@@ -35,7 +35,7 @@ const Skills =()=> {
           "> 
               
               <motion.div 
-                className="felx items-center justify-center rounded-full font-semiboldbg  text-light
+                className="felx items-center justify-center rounded-full font-semiboldbg text-white
                   p-8 shadow-orange-200 cursor-pointer lg:p-6 md:p-4 xs:text-xs xs:p-2"
                 whileHover={{scale:1.20}}
               >
