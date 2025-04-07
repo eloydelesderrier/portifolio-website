@@ -6,10 +6,11 @@ const AboutSection=()=> {
             <div className="xl:gap-16 sm:py-16 xl:px-16" ><br/><br/><br/>
                 <h2 className="text-center text-7xl font-bold text-white mt-4 mb-8 md:mb-12">Sobre mim</h2>
                 <p className=" flex container lg:py-4 items-center justify-around mx-auto text-base lg:text-lg mb-20 line-clamp-5 w-3/4">
-                Me chamo Eloy Lisboa Delesderrier, tenho 24 anos. Formado em Tecnologia em Análise de Desenvolvimento de Software.
-                Sistemas. Sempre busco estar atento às novidades do mundo tecnológico. Tenho buscado oportunidades para iniciar minha carreira.
-                Na área de Tecnologia da Informação. Possuo um bom pensamento analítico, gosto de matemática e assuntos relacionados às ciências exatas.  
-                Meus hobbies são jogar videogame, amo jogar, é uma das coisas que mais gosto de fazer. Gosto de praticar esportes, correr, academia e jogar futebol.
+                   Sou formado em Análise e Desenvolvimento de Sistemas e atualmente curso Ciência da Computação, 
+                   sempre buscando aprofundar meus conhecimentos e expandir minhas habilidades. Atualmente, tenho focado em criar aplicações completas, integrando frontend com React/Tailwind e APIs reais. 
+                   Estou trabalhando em projetos próprios como o MemeVerse, uma plataforma de memes com inteligência artificial e integração com o mundo dos games.
+                  Sou apaixonado por tecnologia, criatividade e inovação. Gosto de transformar ideias em soluções reais que impactem positivamente a vida das pessoas.
+                  Além da programação, também curto futebol, praia, malhar, sair com amigos e estar com a família. Acredito que equilíbrio é fundamental para a produtividade e a criatividade.
                 </p>
             </div>
             
