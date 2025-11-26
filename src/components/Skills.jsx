@@ -61,7 +61,18 @@ const Skills = () => {
         <Skill name="C#" x="-18vw" y="2vw" />
         <Skill name="JavaScript" x="-5vw" y="-12vw" />
         <Skill name="React" x="20vw" y="6vw" />
-        <Skill name="NodeJs" x="0vw" y="1
+        <Skill name="NodeJs" x="0vw" y="12vw" />
+        <Skill name="HTML" x="-22vw" y="-16vw" />
+        <Skill name="CSS" x="17vw" y="-13vw" />
+        <Skill name="Banco de Dados" x="30vw" y="-4vw" />
+        <Skill name="GIT" x="30vw" y="-18vw" />
+      </div>
+    </section>
+  );
+};
+
+export default Skills;
+
 
 
 
