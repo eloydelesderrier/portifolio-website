@@ -3,98 +3,80 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const containerVariants = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.12,
-    },
-  },
-};
-
-const skillVariants = {
-  hidden: { opacity: 0, scale: 0.5, y: 20 },
-  show: {
-    opacity: 1,
-    scale: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 120,
-    },
-  },
-  hover: { scale: 1.15 },
-};
-
-const Skill = ({ name }) => (
-  <motion.div
-    variants={skillVariants}
-    whileHover="hover"
-    className="
-      flex items-center justify-center
-      px-5 py-3 md:px-6 md:py-3
-      bg-black text-white 
-      rounded-full shadow-md cursor-pointer 
-      font-semibold text-sm md:text-base
-    "
-  >
-    {name}
-  </motion.div>
-);
-
-const Category = ({ title, skills }) => (
-  <div className="mb-10">
-    <h3 className="text-2xl font-bold mb-4 text-white">{title}</h3>
-
+const Skill = ({ name, x, y }) => {
+  return (
     <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.3 }}
       className="
-        grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 
-        gap-4 md:gap-6
-        place-items-center
+        flex items-center justify-center
+        rounded-full font-semibold 
+        bg-gradient-to-r from-purple-600 to-blue-600 
+        text-white shadow-xl cursor-pointer absolute
+        py-3 px-6 
+        lg:py-5 lg:px-8
+        md:py-2 md:px-4 md:text-sm
+        sm:py-1 sm:px-3 sm:text-xs
+        transition-all duration-300
       "
+      whileHover={{ scale: 1.25, boxShadow: "0px 0px 25px rgba(140, 60, 255, 0.7)" }}
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1, x, y }}
+      transition={{ duration: 2 }}
+      viewport={{ once: true }}
     >
-      {skills.map((s, i) => (
-        <Skill key={i} name={s} />
-      ))}
+      {name}
     </motion.div>
-  </div>
-);
+  );
+};
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-16 px-6 max-w-6xl mx-auto">
-      <h2 className="text-center text-5xl font-bold text-white mb-14">
+    <section id="skills" className="py-10">
+      <h2 className="text-center text-5xl md:text-6xl font-bold text-white mb-12 drop-shadow-lg">
         Habilidades
       </h2>
 
-      <Category
-        title="Backend"
-        skills={["Python", "Node.js", "C#", "FastAPI", "Express"]}
-      />
+      {/* Container Principal */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className="
+          relative flex items-center justify-center
+          w-full h-[80vh] md:h-[90vh]
+          rounded-full bg-circularLight
+        "
+      >
+        {/* Elemento Central */}
+        <motion.div
+          className="
+            flex items-center justify-center
+            rounded-full font-bold text-white 
+            bg-gradient-to-r from-blue-700 to-purple-700
+            shadow-2xl cursor-pointer
+            p-10 lg:p-8 md:p-5 sm:p-3 sm:text-xs
+            animate-pulse
+          "
+          whileHover={{ scale: 1.15 }}
+        >
+          Python
+        </motion.div>
 
-      <Category
-        title="Frontend"
-        skills={["React", "Next.js", "Tailwind CSS", "HTML", "CSS", "JavaScript"]}
-      />
-
-      <Category
-        title="Banco de Dados"
-        skills={["MySQL", "SQL Server", "MongoDB", "SQLite"]}
-      />
-
-      <Category
-        title="Ferramentas"
-        skills={["Git", "Figma", "Docker", "Linux"]}
-      />
+        {/* Skills animadas */}
+        <Skill name="C#" x="-18vw" y="2vw" />
+        <Skill name="JavaScript" x="-5vw" y="-12vw" />
+        <Skill name="React" x="20vw" y="6vw" />
+        <Skill name="NodeJs" x="0vw" y="12vw" />
+        <Skill name="HTML" x="-22vw" y="-16vw" />
+        <Skill name="CSS" x="17vw" y="-13vw" />
+        <Skill name="Banco de Dados" x="30vw" y="-4vw" />
+        <Skill name="GIT" x="30vw" y="-18vw" />
+      </motion.div>
     </section>
   );
 };
 
 export default Skills;
+
 
 
 
